@@ -7,7 +7,7 @@ import joblib
 st.set_page_config(page_title="Alzheimer's Prediction", layout="wide")
 st.title("Alzheimer's Disease Risk Prediction App")
 
-# Load your trained model
+# Load trained model
 
 scaler = joblib.load("scaler.pkl")
 model = joblib.load("alzheimers_model.pkl")
@@ -91,6 +91,6 @@ if st.button("🔍 Predict Alzheimer's Risk"):
     label = "🟥 Positive for Alzheimer's" if prediction == 1 else "🟩 Negative for Alzheimer's"
     st.success(f"Prediction: {label}")
 
-    # Optional: Confidence score
+    # Confidence score
     proba = model.predict_proba(scaled_input)[0]
     st.info(f"Probability of Alzheimer's: {proba[1]*100:.2f}%")
