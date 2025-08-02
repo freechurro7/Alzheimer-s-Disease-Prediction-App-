@@ -60,7 +60,7 @@ chol_trig = st.number_input("Triglycerides (50 to 400)", 50.0, 400.0)
 
 # --- Cognitive and Behavioral ---
 st.subheader("Cognitive Assessments")
-mmse = st.number_input("MMSE Score (0 = non-cognitive, 10 = fully cognitive)", 0.0, 30.0)
+mmse = st.number_input("MMSE Score (0 = non-cognitive, 30 = fully cognitive)", 0.0, 30.0)
 adl = st.number_input("ADL Score (0 = impaired, 10 = functional)", 0.0, 10.0)
 func = st.number_input("Functional Assessment (0 = impaired, 10 = functional)", 0.0, 10.0)
 
